@@ -1,0 +1,18 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.bg-light{
+  background-color: darken($color-light, 3%) !important;
+}
+.bg-muted{
+  background-color: darken($color-light, 10%) !important;
+}
+.bg-white{
+  background-color: $color-white !important;
+}
+.bg-primary{
+  background-color: $color-primary !important;
+}
+.bg-warning{
+  background-color: lighten($color-warning, 20%) !important;
+}

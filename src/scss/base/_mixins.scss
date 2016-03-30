@@ -1,0 +1,62 @@
+@import "mixins/_animate";
+@import "mixins/_btn";
+@import "mixins/_box";
+@import "mixins/_border";
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity = $opacity * 100);
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+    &::-moz-placeholder {
+        color: $color;
+
+        // Firefox
+        opacity: 1;
+    }
+
+    // See https://github.com/twbs/bootstrap/pull/11526
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+
+    // Internet Explorer 10+
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    // Safari and Chrome
+}
+
+// User select
+// For selecting text on the page
+
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+    -moz-user-select: $select;
+    -ms-user-select: $select;
+
+    // IE10+
+    user-select: $select;
+}
+
+@mixin icon($position: relative, $display: inline-block, $margin: 0) {
+    &:before {
+        position: $position;
+        display: $display;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        text-decoration: inherit;
+        margin: $margin;
+        text-align: center;
+
+        /* For safety - reset parent styles, that can break glyph codes*/
+        font-variant: normal;
+        text-transform: none;
+    }
+}
+

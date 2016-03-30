@@ -1,0 +1,55 @@
+@mixin box() {
+  display: -webkit-box;
+  display: -moz-box;
+  //display: -ms-flexbox;
+  //display: -webkit-flex;
+  //display: box;
+  //display: flexbox;
+  //display: flex;
+}
+
+@mixin box-flex($flex) {
+  -moz-box-flex: $flex; /* Firefox */
+  -webkit-box-flex: $flex; /* Safari 和 Chrome */
+  flex: $flex;
+//  width: 1%;
+}
+
+//
+// 子元素的横竖排列方向
+// horizontal | vertical | inline-axis | block-axis | inherit
+@mixin box-orient($orienT) {
+  -moz-box-orient: $orienT;
+  -webkit-box-orient: $orienT;
+  //-o-box-orient: $orienT;
+}
+
+// 水平方向的对齐方式
+// start | end | center | justify
+@mixin box-pack($pack, $important: '') {
+  -moz-box-pack: #{$pack $important};
+  -webkit-box-pack: #{$pack $important};
+  //-o-box-pack: $pack;
+}
+
+// 垂直方向的对齐方式
+// start | end | center | baseline | stretch
+@mixin box-align($align, $important: '') {
+  -moz-box-align: #{$align $important};
+  -webkit-box-align: #{$align $important};
+  -o-box-align: #{$align $important};
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  box-shadow: $shadow;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+

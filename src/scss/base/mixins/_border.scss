@@ -1,0 +1,126 @@
+@mixin border-left($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid $color;
+
+        @include transform-origin(0, 0);
+
+        @include scale(0.5, 1);
+    }
+}
+
+@mixin border-right($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        border-right: 1px solid $color;
+
+        @include transform-origin(100%, 0);
+
+        @include scale(0.5, 1);
+    }
+}
+
+@mixin border-top($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid $color;
+
+        @include transform-origin(0, 0);
+
+        @include scale(1, 0.5);
+    }
+}
+
+@mixin border-bottom($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid $color;
+
+        @include transform-origin(0, 100%);
+        @include scale(1, 0.5);
+    }
+}
+
+@mixin border-top-bottom($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 1px solid $color;
+        border-bottom: 1px solid $color;
+        box-sizing: border-box;
+        pointer-events: none;
+
+        @include scale(0.5, 0.5);
+        @include transform-origin(0, 0);
+    }
+}
+
+@mixin border($color: $border-color, $radius: 0, $place: ':after') {
+    &#{$place} {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid $color;
+        box-sizing: border-box;
+        pointer-events: none;
+
+        @if($radius){
+            border-radius: $radius * 2;
+        }
+
+        @include scale(0.5, 0.5);
+        @include transform-origin(0, 0);
+    }
+}
+
+@mixin b-border($color: $border-color, $place: ':after') {
+    &#{$place} {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: $border-t, $border-r, $border-b, $border-l;
+        -webkit-background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+        background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+        background-repeat: no-repeat;
+        background-position: top, right, bottom, left;
+        padding: 1px;
+        -webkit-box-sizing: border-box;
+        pointer-events: none;
+    }
+}
+
+@mixin border-none($place: ':after') {
+    &#{$place} {
+        border: none;
+    }
+}

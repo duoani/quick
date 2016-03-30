@@ -1,0 +1,96 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+$gallery-close-size: 60px;
+
+.gallery-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: auto;
+    font-size: $font-size-lg;
+    opacity: 0;
+    @include transition(opacity 0.2s ease-out);
+
+    @at-root .gallery-slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        @at-root .gallery-content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            @include box;
+            @include transition-property(transform);
+            @include transition-duration(.3s);
+            @include transition-timing-function(cubic-bezier(0.1, 0.57, 0.1, 1));
+
+            & > li{
+                @include box();
+                @include box-flex(1);
+                @include box-align(center);
+                @include box-pack(center);
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                .gallery-img{
+                    display: block;
+                }
+            }
+        }
+    }
+    .gallery-loading{
+        
+    }
+    .gallery-text{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 14px 10px;
+        background-color: rgba(0,0,0,.4);
+        color: #ffffff;
+        font-size: 12px;
+
+    }
+    .gallery-icon{
+        position: absolute;
+        top: 0;
+        width: $gallery-close-size;
+        height: $gallery-close-size;
+        line-height: $gallery-close-size - 4;
+        text-align: center;
+        font-size: 30px;
+        opacity: .5;
+        color: $color-white;
+        background-color: #212121;
+    }
+    .gallery-back{
+        left: 0;
+    }
+    .gallery-remove{
+        right: 0;
+    }
+    .ui-slider-indicators{
+        li{
+            background-color: rgba(255, 255, 255, .5);
+            &.current{
+                background-color: $color-hot;
+            }
+        }
+    }
+    .ui-slider-indicators li{
+    }
+}
+.modal-open{
+    .gallery-dialog {
+        opacity: 1;
+    }
+}

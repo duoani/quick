@@ -1,0 +1,83 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+// variant labels color
+@mixin label-variant($color, $background-color) {
+    color: $color;
+    background-color: $background-color;
+}
+
+@mixin label-outline-variant($color, $background-color, $border-color) {
+    color: $color;
+    background-color: $background-color;
+    &:after{
+        border-color: $border-color;
+    }
+}
+
+.label {
+    position: relative;
+    display: inline-block;
+    max-width: 120px;
+    padding: 0 5px;
+    white-space: nowrap;
+    word-break: keep-all;
+    word-wrap: normal;
+    cursor: default;
+    @include label-variant($color-white, $color-muted);
+}
+
+.label-outline{
+    @include border;
+}
+
+.label-primary {
+    @include label-variant($color-white, $color-primary);
+
+    &.label-outline{
+        @include label-outline-variant($color-primary, $color-transparent, $color-primary);
+    }
+}
+
+.label-hot {
+    @include label-variant($color-white, $color-hot);
+
+    &.label-outline {
+        @include label-outline-variant($color-hot, $color-transparent, $color-hot);
+    }
+}
+
+.label-success {
+    @include label-variant($color-white, $color-success);
+
+    &.label-outline {
+        @include label-outline-variant($color-success, $color-transparent, $color-success);
+    }
+}
+
+.label-warning {
+    @include label-variant($color-white, $color-warning);
+
+    &.label-outline {
+        @include label-outline-variant($color-warning, $color-transparent, $color-warning);
+    }
+}
+
+.label-danger {
+    @include label-variant($color-white, $color-danger);
+    &.label-outline {
+        @include label-outline-variant($color-danger, $color-transparent, $color-danger);
+    }
+}
+
+.label-md{
+    height: 20px;
+    line-height: 20px;
+}
+
+.label-round{
+    border-radius: 4px;
+    &:after{
+        border-radius: 8px;
+    }
+}

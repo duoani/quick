@@ -1,0 +1,44 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.icon-3rd{
+    display: block;
+    font-size: 0;
+    background-image: url(#{$base-path}/pay.gif);
+    background-repeat: no-repeat;
+    background-size: 50px auto;
+    width: 50px;
+    height: 50px;
+
+}
+.icon-yibao{
+    background-position: 0 0;
+}
+.icon-alipay{
+    background-position: 0 -50px;
+}
+.icon-weixin{
+    background-position: 0 -100px;
+}
+.icon-qq{
+    background-position: 0 -150px;
+}
+
+.icon-3rd-sm {
+    background-size: 30px auto;
+    width: 30px;
+    height: 30px;
+    
+    &.icon-yibao{
+        background-position: 0 0;
+    }
+    &.icon-alipay{
+        background-position: 0 -30px;
+    }
+    &.icon-weixin{
+        background-position: 0 -60px;
+    }
+    &.icon-qq{
+        background-position: 0 -90px;
+    }
+}

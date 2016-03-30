@@ -1,0 +1,43 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>提示</h4>
+</nav>
+<div class="content">
+	<div class="ui-slider">
+		<ul class="ui-slider-content" style="width: 300%">
+			<li><span style="background-image:url(http://placeholder.qiniudn.com/640x200);"></span></li>
+			<li><span style="background-image:url(http://placeholder.qiniudn.com/640x200);"></span></li>
+			<li><span style="background-image:url(http://placeholder.qiniudn.com/640x200);"></span></li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+<script>
+var slider = new fz.Scroll('.ui-slider', {
+    role: 'slider',
+    indicator: true,
+    autoplay: false,
+    interval: 3000
+});
+
+slider.on('beforeScrollStart', function(fromIndex, toIndex) {
+    console.log(fromIndex,toIndex)
+});
+
+slider.on('scrollEnd', function(cruPage) {
+    console.log(cruPage)
+});
+</script>
+</body>
+</html>

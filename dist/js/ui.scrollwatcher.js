@@ -1,0 +1,1 @@
+!function(){$.fn.scrollwatcher=function(n){return this.each(function(){var o=$(this),c=o.scrollTop(),r=n||function(){};o.on("scroll",function(){var n=o.scrollTop(),t=n-c;return 0===t?!1:(r(t>0?"down":"up",n),void(c=n))})})}}();

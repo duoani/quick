@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+    <style>
+		body{
+			background-color: #eaeaea;
+		}
+        .block {
+            padding: 20px 0;
+        }
+
+        .block h1 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        .block h2 {
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            margin-top: 15px;;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>tab</h4>
+</nav>
+<div class="content text-default">
+    <section class="block">
+        <h1>tab</h1>
+        <div>
+            <ul class="tab">
+                <li><a href="#tab1" data-toggle="tab">全部(100)</a></li>
+                <li class="active"><a href="#tab2" data-toggle="tab">待付款(999)</a></li>
+                <li><a href="#tab3" data-toggle="tab">待收货(999)</a></li>
+                <li><a href="#tab4" data-toggle="tab">待评价(999)</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab1" class="tab-panel">hello1</div>
+                <div id="tab2" class="tab-panel active">hello2</div>
+                <div id="tab3" class="tab-panel">hello3</div>
+                <div id="tab4" class="tab-panel">hello4</div>
+            </div>
+        </div>
+        <div class="mt-lg">
+        </div>
+    </section>
+    <section class="block">
+        <h1>tab tab-upper</h1>
+        <div>
+            <ul class="tab tab-upper">
+                <li><a href="#tab21" data-toggle="tab">全部(100)</a></li>
+                <li class="active"><a href="#tab22" data-toggle="tab">待付款(999)</a></li>
+                <li><a href="#tab23" data-toggle="tab">待收货(999)</a></li>
+                <li><a href="#tab24" data-toggle="tab">待评价(999)</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab21" class="tab-panel">hello1</div>
+                <div id="tab22" class="tab-panel active">hello2</div>
+                <div id="tab23" class="tab-panel">hello3</div>
+                <div id="tab24" class="tab-panel">hello4</div>
+            </div>
+        </div>
+    </section>
+    <section class="block">
+        <h1>tab tab-fill</h1>
+        <div>
+            <ul class="tab tab-fill">
+                <li><a href="#tab31" data-toggle="tab">品牌介绍</a></li>
+                <li class="active"><a href="#tab32" data-toggle="tab">精彩活动</a></li>
+                <li><a href="#tab33" data-toggle="tab">商品列表</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab31" class="tab-panel">hello1</div>
+                <div id="tab32" class="tab-panel active">hello2</div>
+                <div id="tab33" class="tab-panel">hello3</div>
+            </div>
+        </div>
+    </section>
+    <section class="block">
+        <h1>tab tab-bordered</h1>
+        <div>
+            <ul class="tab tab-bordered">
+                <li><a href="#tab41" data-toggle="tab">品牌介绍</a></li>
+                <li class="active"><a href="#tab42" data-toggle="tab">精彩活动</a></li>
+                <li><a href="#tab43" data-toggle="tab">商品列表</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab41" class="tab-panel">hello1</div>
+                <div id="tab42" class="tab-panel active">hello2</div>
+                <div id="tab43" class="tab-panel">hello3</div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+//默认焦点为底边线
+.tab{
+    @include box;
+    background-color: $color-white;
+    height: $tab-height;
+
+    &>li{
+        position: relative;
+        height: $tab-height;
+        line-height: $tab-height;
+        text-align: center;
+        @include box-flex(1);
+        width: 0%;
+
+        &>a{
+            position: relative;
+            display: block;
+            color: $color-default;
+            height: $tab-height;
+            line-height: $tab-height;
+        }
+    }
+    &>.active{
+        border-bottom: 2px solid $color-primary;
+    }
+}
+
+.tab-upper{
+    &>.active{
+        border-top: 2px solid $color-primary;
+        border-bottom: none;
+
+        &>a{
+            height: $tab-height - 2;
+            line-height: $tab-height - 4;
+        }
+    }
+}
+
+//焦点为背景颜色
+.tab-fill{
+    &>.active{
+        border-bottom: none;
+        background-color: $color-primary;
+
+        a{
+            color: $color-white;
+        }
+    }
+}
+
+//加边框
+.tab-bordered{
+    &>li{
+        @include border;
+        &:after{
+            border-right: 0;
+        }
+    }
+    &>li.active{
+        &:after{
+            border-bottom: 0;
+        }
+    }
+}
+
+//tab内容
+.tab-content{
+    &>.tab-panel{
+        display: none;
+    }
+    &>.active{
+        display: block;
+    }
+}
+
+// Position
+.tab-abs{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.nav-t ~ .tab-abs{
+    top: $nav-top-height;
+}

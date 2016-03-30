@@ -1,0 +1,157 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.mt-sm{
+    margin-top: $margin-sm !important;
+}
+
+.mt{
+    margin-top: $margin-default !important;
+}
+
+.mt-md{
+    margin-top: $margin-md !important;
+}
+
+.mt-lg{
+    margin-top: $margin-lg !important;
+}
+.mb-sm {
+  margin-bottom: $margin-sm !important;
+}
+.mb {
+  margin-bottom: $margin-default !important;
+}
+.mb-md {
+  margin-bottom: $margin-md !important;
+}
+.mb-lg {
+  margin-bottom: $margin-lg !important;
+}
+
+.ml-sm{
+    margin-left: $margin-sm !important;
+}
+
+.ml{
+    margin-left: $margin-default !important;
+}
+
+.ml-md{
+    margin-left: $margin-md !important;
+}
+
+.ml-lg{
+    margin-left: $margin-lg !important;
+}
+
+.mr-sm{
+    margin-right: $margin-sm !important;
+}
+
+.mr{
+    margin-right: $margin-default !important;
+}
+
+.mr-md{
+    margin-right: $margin-md !important;
+}
+
+.mr-lg{
+    margin-right: $margin-lg !important;
+}
+
+// Padding
+.pt-sm{
+    padding-top: $margin-sm !important;
+}
+
+.pt{
+    padding-top: $margin-default !important;
+}
+
+.pt-md{
+    padding-top: $margin-md !important;
+}
+
+.pt-lg{
+    padding-top: $margin-lg !important;
+}
+
+.pl-sm{
+    padding-left: $margin-sm !important;
+}
+
+.pl{
+    padding-left: $margin-default !important;
+}
+
+.pl-md{
+    padding-left: $margin-md !important;
+}
+
+.pl-lg{
+    padding-left: $margin-lg !important;
+}
+
+.pr-sm{
+    padding-right: $margin-sm !important;
+}
+
+.pr{
+    padding-right: $margin-default !important;
+}
+
+.pr-md{
+    padding-right: $margin-md !important;
+}
+
+.pr-lg{
+    padding-right: $margin-lg !important;
+}
+
+.pb-sm{
+    padding-bottom: $margin-sm !important;
+}
+
+.pb{
+    padding-bottom: $margin-default !important;
+}
+.pb-md{
+    padding-bottom: $margin-md !important;
+}
+.pb-lg{
+    padding-bottom: $margin-lg !important;
+}
+
+.p{
+    padding: $margin-default !important;
+}
+.p-sm{
+    padding: $margin-sm !important;
+}
+.p-md{
+    padding: $margin-md !important;
+}
+.p-lg{
+    padding: $margin-lg !important;
+}
+
+.part-left{
+    margin-left: $list-pad !important;
+    padding-left: 0 !important;
+}
+.join-top{
+    padding-top: 0 !important;
+}
+.join-left{
+  padding-left: 0 !important;
+}
+.join-right{
+  padding-right: 0 !important;
+}
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

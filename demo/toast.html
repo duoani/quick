@@ -1,0 +1,53 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+	<style>
+		.block {
+			padding: 20px 0;
+		}
+
+		.block h1 {
+			height: 30px;
+			line-height: 30px;
+			font-size: 20px;
+			margin-top: 15px;
+		}
+		.block h2 {
+			height: 25px;
+			line-height: 25px;
+			font-size: 14px;
+			margin-top: 15px;;
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>弹层提示</h4>
+</nav>
+<div class="content">
+    <section class="block">
+        <h2>样式</h2>
+        <div>
+            <div id="btn1-1" class="btn btn-sm btn-primary">打开弹层</div>
+        </div>
+        <pre><code>
+    $.toast("这是提示");
+        </code></pre>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+<script>
+//样式
+$("#btn1-1").on("click", function(){
+    $.toast("这是提示");
+});
+</script>
+</body>
+</html>

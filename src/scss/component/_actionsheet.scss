@@ -1,0 +1,117 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.actionsheet-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    @include box-orient(vertical);
+}
+
+.actionsheet-modal {
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-size: $font-size-lg;
+        color: #d2d2d2;
+        background: rgba(0, 0, 0, 0);
+
+        @include transition(background $area-animation-duration);
+
+        @include box;
+
+        @include box-pack(center);
+
+        @include box-align(center);
+    }
+}
+
+.actionsheet-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    pointer-events: auto;
+
+    @include transition-property(transform);
+
+    @include transition-duration($area-animation-duration);
+
+    @include translate(0, 100%);
+}
+
+.actionsheet-menu {
+    margin-bottom: 10px;
+
+    & > div {
+        @include border-bottom;
+    }
+
+    & > div:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    & > div:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        @include border-none;
+    }
+}
+
+.actionsheet-cancel {
+    .actionsheet-cell {
+        border-radius: 4px;
+    }
+}
+
+.actionsheet-desc {
+    position: relative;
+    background: $color-white;
+    font-size: $font-size-md;
+    color: $color-muted;
+    padding: 15px 20px;
+
+    @include box;
+
+    @include box-align(center);
+
+    @include box-pack(center);
+}
+
+.actionsheet-cell {
+    position: relative;
+    background: $color-white;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: $font-size-lg;
+
+    &:active {
+        background-color: $color-light;
+    }
+}
+.actionsheet-cell.cell-primary{
+    color: $actionsheet-btn-primary;
+}
+
+.actionsheet-modal.modal-open {
+    .modal-backdrop {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .actionsheet-dialog {
+        @include translate(0, 0);
+    }
+}
+

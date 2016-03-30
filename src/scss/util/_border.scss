@@ -1,0 +1,38 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.border-t {
+    position: relative;
+    @include border-top;
+}
+
+.border-b {
+    position: relative;
+    @include border-bottom;
+}
+
+.border-tb {
+    position: relative;
+    @include border-top-bottom;
+}
+
+.border-l {
+    position: relative;
+    @include border-left;
+}
+
+.border-r {
+    position: relative;
+    @include border-right;
+}
+
+.border {
+    position: relative;
+    @include border;
+}
+
+.border-none {
+    position: relative;
+    @include border-none;
+}
+

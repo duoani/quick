@@ -1,0 +1,56 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.checkbox {
+    line-height: $checkbox-line-height;
+    display: inline-block;
+
+    input {
+        display: inline-block;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        position: relative;
+        overflow: visible;
+        border: 0;
+        background: 0 0;
+        -webkit-appearance: none;
+        outline: 0;
+        margin-right: $checkbox-text-spacing;
+        vertical-align: middle;
+        text-align: center;
+        line-height: $checkbox-size;
+        color: $checkbox-bg;
+        font-size: 15px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border: $checkbox-border;
+            background-clip: padding-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 2px solid $color-primary;
+            border-radius: 30px;
+            box-sizing: border-box;
+        }
+
+        &:checked:after {
+            content: '\e835';
+            display: block;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            position: absolute;
+            font-family: "fontello";
+        }
+
+        &.disabled,
+        &[disabled]{
+            &:before{
+                background-color: $checkbox-disabled-bg;
+            }
+        }
+    }
+}

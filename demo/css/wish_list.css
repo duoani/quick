@@ -1,0 +1,33 @@
+.grid-2 .checkbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10px;
+  bottom: 10px;
+  padding-top: 5px;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+.action-bar {
+  bottom: -60px;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.open-edit .content {
+  padding-bottom: 60px;
+}
+
+.open-edit .checkbox {
+  display: block;
+}
+
+.modal-open.action-bar {
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}

@@ -1,0 +1,155 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.ctrl-num {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 0; //消除inline-block之间的间隙
+
+    a {
+        position: relative;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-decoration: none;
+        color: $color-strong;
+        background-color: lighten($color-light, 10%);
+        vertical-align: top;
+        font-size: 14px;
+        overflow: hidden;
+
+        &:hover {
+            text-decoration: none;
+        }
+        &:after {
+            content: " ";
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include scale(.5, .5);
+            @include transform-origin(0, 0);
+            box-sizing: border-box;
+        }
+    }
+
+    .num-input-wrap{
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 28px;
+        @include border($color: darken($border-color, 30%), $place: ':after');
+    }
+    input {
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 6px 5px;
+        line-height: 1;
+        font-size: 14px;
+        vertical-align: top;
+        text-align: center;
+        color: $color-strong;
+        border: none;
+        outline: 0;
+        box-sizing: border-box;
+
+    }
+
+    .num-dec {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        &:after {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-top: 1px solid darken($border-color, 30%);
+            border-left: 1px solid darken($border-color, 30%);
+            border-bottom: 1px solid darken($border-color, 30%);
+        }
+    }
+
+    .num-inc {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        &:after {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top: 1px solid darken($border-color, 30%);
+            border-right: 1px solid darken($border-color, 30%);
+            border-bottom: 1px solid darken($border-color, 30%);
+        }
+    }
+}
+
+.cart-num input {
+    width: 30px;
+    font-size: 12px;
+}
+
+.has-error {
+    .ctrl-num {
+        border-color: $color-danger;
+
+        a{
+            background-color: lighten($color-danger, 30%);
+        }
+        .num-dec {
+            border-right-color: $color-danger;
+        }
+
+        .num-inc {
+            border-left-color: $color-danger;
+        }
+    }
+}
+
+.disabled.ctrl-num,
+.readonly.ctrl-num{
+    a{
+        background-color: $color-light;
+        color: lighten($color-muted, 15%);
+        cursor: not-allowed;
+        &:after{
+            border-color: $border-color;
+        }
+    }
+    .num-input-wrap{
+        &:after{
+            border-color: $border-color;
+        }
+    }
+    input{
+        color: $color-default;
+        background-color: $color-light;
+    }
+    input[readonly] {
+        cursor: not-allowed;
+    }
+}
+
+.dec-disabled{
+    .num-dec{
+        background-color: $color-light;
+        color: $color-muted;
+        cursor: not-allowed;
+        &:after{
+            border-color: $border-color;
+        }
+    }
+}
+
+.inc-disabled{
+    .num-inc {
+        background-color: $color-light;
+        color: $color-muted;
+        cursor: not-allowed;
+        &:after{
+            border-color: $border-color;
+        }
+    }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+    <style>
+body{
+    background-color: #eaeaea;
+}
+        .block {
+            padding: 20px 0;
+        }
+
+        .block h1 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        .block h2 {
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            margin-top: 15px;;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>表单</h4>
+</nav>
+<div class="content text-default">
+    <section class="block">
+        <div class="panel border-tb">
+            <div class="form-line border-b">
+                <label class="form-label">用户名：</label>
+                <div class="form-control">
+                    <input type="text" value="普通输入框" data-input-type="text" placeholder="文本"/>
+                    <div class="form-error">这是错误信息</div>
+                </div>
+            </div>
+            <div class="form-line">
+                <label class="form-label">用户名：</label>
+                <div class="form-control form-action-control border-b">
+                    <div class="input-group">
+                        <input id="input-wc" type="text" value="带清空小图标" data-input-type="text" placeholder="文本"/>
+                        <div class="input-group-addon" data-input-type="clear">
+                            <i class="form-clear pl-lg pr-lg"></i>
+                        </div>
+                    </div>
+                    <div class="form-error">这是错误信息</div>
+                </div>
+            </div>
+            <div class="form-line  border-b">
+                <label class="form-label">密码：</label>
+                <div class="form-control form-action-control">
+                    <div class="input-group">
+                        <input type="password" value="" data-input-type="text" placeholder="密码框"/>
+                        <div class="input-group-addon">
+                            <div class="input-group-addon" data-input-type="clear">
+                                <i class="form-clear pl-lg pr-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-error">这是错误信息</div>
+                </div>
+            </div>
+            <div class="form-line form-label-long has-error border-b">
+                <label class="form-label">标题比较长：</label>
+                <div class="form-control">
+                    <input id="input-wc" type="text" value="" placeholder="文本"/>
+                    <div class="form-error">这是错误信息</div>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <label class="form-label">Title：</label>
+                <div class="form-control">
+                    <div class="input-group">
+                        <input type="text" value="" placeholder="输入框带按钮"/>
+                        <div class="input-group-addon">
+                            <div class="btn btn-primary btn-round btn-xs">按钮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel border-tb">
+            <div class="form-line border-b">
+                <label class="form-label">Title：</label>
+                <div class="form-control">
+                    <p class="form-static">只读信息</p>
+                    <div class="form-error">这是错误信息</div>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <div class="form-control">
+                    <div class="input-group">
+                        <p class="form-static">只读信息</p>
+
+                        <div class="input-group-addon">
+                            <div class="btn btn-primary btn-round btn-xs">按钮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <div class="form-control">
+                    <div class="input-group">
+                        <span class="form-static nowrap-flex">单行文字</span>
+                        <div class="input-group-addon">
+                            <div class="btn btn-primary btn-round btn-xs">按钮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <div class="form-control">
+                    <div class="input-group">
+                        <span class="form-static-sm nowrap-double">双行文字双行文字双行文字双行文字双行文字双行文字双行文字双行文字双行</span>
+                        <div class="input-group-addon">
+                            <div class="btn btn-primary btn-round btn-xs">按钮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel border-tb">
+            <div class="form-line border-b">
+                <label class="form-label">输入区：</label>
+                <div class="form-control">
+                    <div class="input-group">
+                        <textarea name="" id=""  rows="3" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-line border-b list-link list-link-down">
+                <label class="form-label">单选：</label>
+                <div class="form-control">
+                    <select name="">
+                        <option value="1">select</option>
+                        <option value="2">选项2</option>
+                        <option value="3">选项3</option>
+                        <option value="4">选项4</option>
+                        <option value="5">选项5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <label class="form-label">Title：</label>
+                <div class="form-control">
+                    <label class="checkbox">
+                        <input type="checkbox" value="1"/>Check 1
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="1"/>Check 2
+                    </label>
+                </div>
+            </div>
+            <div class="form-line border-b">
+                <div class="form-control">
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" value="1"/>选项+按钮
+                        </label>
+                        <div class="input-group-addon">
+                            <div class="btn btn-primary btn-round btn-xs">按钮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel border-tb">
+            <div class="form-line list-active">
+                <div class="form-control form-control-pad border-b">
+                    <label class="input-group checkbox">
+                        <div class="input-group-addon">
+                            <div class="list-thumb-sm"><i class="icon-3rd icon-3rd-sm icon-alipay"></i></div>
+                        </div>
+                        <div class="form-static">支付宝支付</div>
+                        <div class="input-group-addon">
+                            <input type="radio" name="pay">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="form-line list-active">
+                <div class="form-control form-control-pad border-b">
+                    <label class="input-group checkbox">
+                        <div class="input-group-addon">
+                            <div class="list-thumb-sm"><i class="icon-3rd icon-3rd-sm icon-weixin"></i></div>
+                        </div>
+                        <div class="form-static">微信支付</div>
+                        <div class="input-group-addon">
+                            <input type="radio" name="pay">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="form-line list-active">
+                <div class="form-control form-control-pad border-b">
+                    <label class="input-group checkbox">
+                        <div class="input-group-addon">
+                            <div class="list-thumb-sm"><i class="icon-3rd icon-3rd-sm icon-yibao"></i></div>
+                        </div>
+                        <div class="form-static">易宝支付</div>
+                        <div class="input-group-addon">
+                            <input type="radio" name="pay">
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-btn-line">
+            <div class="btn btn-primary btn-round btn-block">表单按钮</div>
+            <a class="btn btn-link btn-default" href="">链接</a>
+            <a class="btn btn-link btn-default fr" href="">右侧链接</a>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+</body>
+</html>

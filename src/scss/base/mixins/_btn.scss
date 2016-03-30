@@ -1,0 +1,72 @@
+// variant buttons color
+@mixin button-variant($color, $background-color, $border-color) {
+    color: $color;
+    background-color: $background-color;
+
+    &:after {
+        border-color: $border-color;
+    }
+
+    /*&:hover,*/
+    &:focus,
+    &:active,
+    &.active {
+        color: $color;
+        background-color: darken($background-color, 10%);
+
+        &:after {
+            border-color: darken($border-color, 12%);
+        }
+    }
+
+    &.disabled,
+    &[disabled] {
+        &,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: $background-color;
+
+            &:after {
+                border-color: $border-color;
+            }
+        }
+    }
+}
+
+// outline style button
+@mixin button-outline-variant($color) {
+    color: $color;
+    background-color: $color-transparent;
+
+    &:after {
+        border-color: $color;
+    }
+
+    /*&:hover,*/
+    &:focus,
+    &:active,
+    &.active {
+        color: $color-white;
+        background-color: $color;
+
+        &:after {
+            border-color: $color;
+        }
+    }
+
+    &.disabled,
+    &[disabled] {
+        &,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: $color-transparent;
+
+            &:after {
+                border-color: $color;
+            }
+        }
+    }
+}
+

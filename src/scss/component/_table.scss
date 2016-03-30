@@ -1,0 +1,31 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.table{
+    width: 100%;
+    table-layout: fixed;
+    th, td{
+        padding: 5px 0 5px 15px;
+        position: relative;
+    }
+    tr:first-child > td{
+        padding-top: 10px;
+    }
+    tr:last-child > td{
+        padding-bottom: 10px;
+    }
+}
+
+.table-border-b{
+    th, td{
+        @include border-bottom;
+    }
+}
+
+.table-right{
+    text-align: right;
+    th, td{
+        padding-left: 0px;
+        padding-right: 15px;
+    }
+}

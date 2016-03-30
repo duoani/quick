@@ -1,0 +1,108 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.area-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    z-index: 9999;
+
+    @include transition(background $area-animation-duration);
+    @include box-orient(vertical);
+}
+.area-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    display: block;
+    font-size: $font-size-lg;
+    color: #d2d2d2;
+    @include box;
+    @include box-pack(center);
+    @include box-align(center);
+    @include transition-property(transform);
+    @include transition-duration($area-animation-duration);
+    @include translate(0, -100%);
+}
+.area-dialog{
+    position: fixed;
+    top: 20%; 
+    left: 0;
+    width: 100%;
+    height: 80%;
+    pointer-events: auto;
+    background-color: $color-white;
+
+    @include box;
+    @include box-orient(horizontal);
+    @include box-pack(center);
+    @include box-align(start);
+    @include transition-property(transform);
+    @include transition-duration($area-animation-duration);
+    @include translate(0, 100%);
+}
+.area-list{
+    height: 100%;
+    @include box;
+    @include box-flex(1);
+    @include box-orient(vertical);
+    @include box-align(start);
+    text-align: center;
+    width: 33.33333%;
+    
+    .area-title{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        font-size: $font-size-md;
+        background-color: $color-light;
+    }
+    .area-content{
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        @include box-flex(1);
+
+        li{
+            font-size: $font-size-lg;
+            padding: 0 5px;
+            height: 40px;
+            line-height: 40px;
+            &.active{
+                background: darken($color-light, 5%);
+                border-right: 2px solid $color-muted;
+            }
+        }
+    }
+}
+.area-province{
+}
+.area-city{
+    @include box-flex(1);
+}
+.area-county{
+    @include box-flex(1);
+}
+.area-modal.modal-open{
+    display: block;
+
+    &.area-modal{
+        background: rgba(0,0,0,.4);
+    }
+    .area-backdrop{
+        @include translate(0, 0);
+    }
+    .area-dialog{
+        @include translate(0, 0);
+    }
+}

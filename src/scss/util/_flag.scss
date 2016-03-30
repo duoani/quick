@@ -1,0 +1,37 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.flag {
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: top;
+}
+
+$country: (
+        ES: 'spain.png', //西班牙
+        NZ: 'newzealand.png', //新西兰
+        US: 'US.png', //美国
+        FR: 'france.png', //法国
+        CA: 'canada.png', //加拿大
+        IT: 'italy.png', //意大利
+        KR: 'korea.png', //韩国
+        SE: 'sweden.png', //瑞典
+        TH: 'thailand.png', //泰国
+        GB: 'UK.png', //英国
+        NL: 'netherlands.png', //荷兰
+        CH: 'switzerland.png', //瑞士
+        JP: 'japan.png', //日本
+        CN: 'china.png', //中国
+        RU: 'russia.png', //俄罗斯
+        DE: 'germany.png' //德国
+);
+
+@each $code, $img in $country {
+  .flag-#{$code} {
+    background-image: url("#{$base-path}/flags/#{$img}");
+  }
+}

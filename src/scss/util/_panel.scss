@@ -1,0 +1,8 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.panel{
+    position: relative;
+    background-color: $color-white;
+    margin-bottom: $margin-default;
+}

@@ -1,0 +1,32 @@
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>地区选择</h4>
+</nav>
+<div class="content">
+    <p class="mt-sm">已选择：</span><span id="selected"></p>
+    <div class="btn btn-primary btn-round btn-sm" id="btnSel">选择省市</div>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/lib/area.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+<script>
+    $("#btnSel").on("click", function(){
+        var $this = $(this);
+        var code = $this.attr("code");
+        $.district({value: code}).on("district:change", function(e, selected){
+            $("#selected").text(C.area.toStr(selected[2].code));
+            $this.attr("code", selected[2].code);
+        });        
+    });
+</script>
+</body>
+</html>

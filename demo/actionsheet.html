@@ -1,0 +1,51 @@
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>Action Sheet</h4>
+</nav>
+<div class="content">
+    <div class="btn btn-primary btn-round btn-sm" id="btnOpen">打开</div>
+</div>
+<!--<div class="actionsheet-modal modal-open">-->
+    <!--<div class="modal-backdrop"></div>-->
+    <!--<div class="actionsheet-dialog">-->
+        <!--<div class="actionsheet-menu">-->
+            <!--<div class="actionsheet-desc">确定要删除此规则？</div>    -->
+            <!--<div class="actionsheet-cell">删除</div>    -->
+            <!--<div class="actionsheet-cell">删除</div>    -->
+        <!--</div>-->
+        <!--<div class="actionsheet-cancel">-->
+            <!--<div class="actionsheet-cell">取消</div>    -->
+        <!--</div>-->
+       
+    <!--</div>-->
+<!--</div>-->
+
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+
+<script>
+$("#btnOpen").on("click", function(){
+    var modal = $.modal({
+        content: "确定删除这1个商品吗?",
+        layout: "actionsheet", 
+        backdropClose: true,
+        buttons: [{text:"确定删除", type: "primary"}, "取消"]
+    });
+
+    modal.on("modal:action", function(e){
+        $.toast(""+e.index)
+    });
+
+});
+</script>
+</body>
+</html>

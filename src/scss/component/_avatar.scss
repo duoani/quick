@@ -1,0 +1,57 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.avatar-wrap{
+    position: relative;
+    font-size: 0;
+    i{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+.avatar{
+    position: relative;
+    display: inline-block;
+    width: $avatar-width;
+    height: $avatar-height;
+    text-align: center;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    //background-image: url("#{$base-path}/avatar.gif");
+    background-size: contain;
+    @include border($radius: 50%);
+
+}
+.avatar,
+.list .avatar{
+    & img{
+        vertical-align: middle;
+        width: $avatar-width;
+        height: $avatar-height;
+    }
+}
+.avatar-lg,
+.list .avatar-lg{
+    width: $avatar-lg-width;
+    height: $avatar-lg-height;
+
+    & img{
+        width: $avatar-lg-width;
+        height: $avatar-lg-height;
+    }
+}
+.avatar-sm,
+.list .avatar-sm{
+    width: $avatar-sm-width;
+    height: $avatar-sm-height;
+
+    & img{
+        width: $avatar-sm-width;
+        height: $avatar-sm-height;
+    }
+}

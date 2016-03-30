@@ -1,0 +1,199 @@
+$base-path: "../images" !default;
+
+// Font Size
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size: 13px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+
+// Color
+$color-transparent : transparent !default;
+$color-white       : #ffffff!default;
+$color-light       : #f7f7f7 !default;
+$color-gray        : #8d8d8d !default;
+$color-muted       : #a48b78 !default;
+$color-muted-gray  : #c7c7c7 !default;
+
+$color-default     : #604c3f !default;
+$color-strong      : #604c3f !default;
+$color-primary     : #80cac6 !default;
+$color-success     : #8ec31f !default;
+$color-hot         : #e94662 !default;
+$color-danger      : #d9534f !default;
+$color-warning     : #f9b72d !default;
+$color-box-border  : #ececec !default;
+
+// Border
+$border-color: darken($color-light, 10%);
+$border-t: -webkit-gradient(linear, left bottom, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $border-color));
+$border-b: -webkit-gradient(linear, left top, left bottom, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $border-color));
+$border-l: -webkit-gradient(linear, right top, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $border-color));
+$border-r: -webkit-gradient(linear, left top, right top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $border-color));
+
+// Margin
+$margin-sm: 5px;
+$margin-default: 10px;
+$margin-md: 15px;
+$margin-lg: 20px;
+
+
+// Padding
+$padding-sm: 5px;
+$padding-default: 10px;
+$padding-md: 15px;
+$padding-lg: 20px;
+
+// Link Color.
+$link-color: $color-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%) !default;
+
+// Border
+$box-border: $color-box-border !default;
+
+// edge spacing
+$edge-spacing: 15px;
+
+// Buttons Size
+$btn-height: 50px;
+$btn-line-height: 50px;
+$btn-padding: 0 1rem;
+$btn-font-weight: 700;
+$btn-font-size: 18px;
+$btn-border-width: 1px;
+
+
+$btn-lg-height: 60px;
+$btn-lg-line-height: 60px;
+$btn-lg-font-size: 20px;
+
+$btn-sm-height: 40px;
+$btn-sm-line-height: 40px;
+$btn-sm-font-size: 14px;
+
+$btn-xs-height: 30px;
+$btn-xs-line-height: 30px;
+$btn-xs-font-size: 12px;
+
+$btn-fat-padding-h: 2.5rem;
+$btn-lg-fat-padding-h: 3rem;
+
+// Buttons Color
+$btn-default-color  : $color-strong !default;
+$btn-default-bg     : #f3f3f3 !default;
+$btn-default-border : $color-muted !default;
+
+$btn-primary-color  : $color-white !default;
+$btn-primary-bg     : $color-primary !default;
+$btn-primary-border : darken($color-primary, 5%) !default;
+
+$btn-hot-color      : $color-white !default;
+$btn-hot-bg         : $color-hot !default;
+$btn-hot-border     : darken($color-hot, 5%) !default;
+
+$btn-success-color  : $color-white !default;
+$btn-success-bg     : $color-success !default;
+$btn-success-border : darken($color-success, 5%) !default;
+
+$btn-warning-color  : $color-white !default;
+$btn-warning-bg     : $color-warning !default;
+$btn-warning-border : darken($color-warning, 5%) !default;
+
+$btn-danger-color   : $color-white !default;
+$btn-danger-bg      : $color-danger !default;
+$btn-danger-border  : darken($color-danger, 5%) !default;
+
+// Navigator
+$nav-top-height: 45px;
+$nav-top-font-size: 18px;
+$nav-top-icon-width: $nav-top-height;
+$nav-top-icon-height: $nav-top-height;
+$nav-top-icon-margin: 0;
+$nav-top-icon-top: 0;
+
+$nav-bottom-height: 60px;
+$nav-bottom-icon-width: 100%;
+$nav-bottom-icon-height: 30px;
+$nav-bottom-icon-margin: 5px auto;
+$nav-edge-spacing: $edge-spacing;
+$nav-edge-spacing-sm: 10px;
+
+// Avatar
+$avatar-width: 50px;
+$avatar-height: 50px;
+$avatar-lg-width: 70px;
+$avatar-lg-height: 70px;
+$avatar-sm-width: 30px;
+$avatar-sm-height: 30px;
+
+// Form
+$form-line-height                : 50px;
+$form-line-height-sm             : 38px;
+$form-label-width                : 90px;
+$form-label-width-lg             : 120px;
+$form-label-height               : $form-line-height;
+$form-label-padding              : 0 0 0 #{$edge-spacing};
+$form-label-color                : $color-default;
+$form-control-margin             : 0;
+$form-control-padding            : #{$edge-spacing};
+$form-input-padding              : 10px 3px 10px 0;
+$form-input-padding-sm           : 4px 3px 4px 0;
+$form-input-line-height          : 30px;
+$form-btn-line-padding           : 30px #{$edge-spacing} 15px #{$edge-spacing};
+
+// Checkbox
+$checkbox-size         : 25px;
+$checkbox-line-height  : 25px;
+$checkbox-border       : none;
+$checkbox-text-spacing : 5px;
+$checkbox-bg           : $color-primary;
+$checkbox-disabled-bg  : #ebebeb;
+
+// Radio
+$radio-border      : #dfe0e1;
+$radio-bg          : $color-primary;
+$radio-disabled-bg : #ebebeb;
+
+// List
+$list-tb-spacing: 15px;
+// 左侧是否留空位
+$list-pad: #{$edge-spacing};
+$list-pad-sm: 10px;
+$list-pad-md: 20px;
+$list-thumb-size: 50px;
+$list-thumb-lg-size: 70px;
+$list-thumb-sm-size: 30px;
+
+// Tab
+$tab-height: 40px;
+
+// sex icon
+$sex-icon-width: 26px;
+$sex-icon-height: 26px;
+
+// Notice
+$notice-icon-size: 100px;
+$notice-title-font-size: $font-size-lg;
+$notice-desc-font-size: $font-size-md;
+
+// Modal
+$modal-width: 270px;
+$modal-radius: 6px;
+$modal-header-height: 45px;
+$modal-body-padding: 10px;
+$modal-footer-height: 45px;
+
+// Toast
+$toast-radius: 3px;
+$toast-height: 40px;
+$toast-font-size: $font-size-lg;
+$toast-background: rgba(0,0,0,.7);
+$toast-color: $color-white;
+$toast-fade-out-up-background: rgba(128,202,198,.9);
+
+// Area
+$area-animation-duration: .4s;
+
+// Actionsheet
+$actionsheet-btn-primary: $color-danger;

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+    <style>
+		body{
+			background-color: #eaeaea;
+		}
+        .block {
+            padding: 20px 0;
+        }
+
+        .block h1 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        .block h2 {
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            margin-top: 15px;;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav nav-t nav-primary">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>MLZ样式库</h4>
+</nav>
+<nav class="nav nav-b">
+    <ul>
+        <li class="active">
+            <a href="/">
+                <span class="nav-icon nav-icon-home"></span>
+                首页
+            </a>
+        </li>
+        <li>
+            <a href="../shopping_cart.html">
+                <span class="nav-icon nav-icon-cart"></span>
+                购物车
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="content text-default">
+    <section class="block">
+        <h1>标签</h1>
+        <div>
+            <label class="label label-defult" for="">label-default</label>
+            <label class="label label-primary" for="">label-primary</label>
+            <label class="label label-hot" for="">label-hot</label>
+            <label class="label label-success" for="">label-success</label>
+            <label class="label label-warning" for="">label-warning</label>
+            <label class="label label-danger" for="">label-danger</label>
+        </div>
+    </section>
+    <section class="block">
+        <h1>评价</h1>
+        <div>
+            <div class="grade">
+                <i class="grade1 active"><span class="grade-tips">失望</span></i>
+                <i class="grade2"><span class="grade-tips">不满</span></i>
+                <i class="grade3"><span class="grade-tips">一般</span></i>
+                <i class="grade4"><span class="grade-tips">满意</span></i>
+                <i class="grade5"><span class="grade-tips">惊喜</span></i>
+            </div>
+        </div>
+    </section>
+    <section class="block">
+        <h1>Grid</h1>
+        <div class="">
+            <ul class="grid-2 clearfix">
+                <li class="fl">
+                    <div class="grid-cell border">
+                        <div class="grid-inner">
+                            <div class="grid-img"><img src="" alt=""></div>
+                            <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                            <p>专柜价 ￥150.00</p>
+                            <span class="text-md text-hot">￥399.50</span>
+                            <s class="text-xs text-muted">￥709.394</s>
+                        </div>
+                        <div class="tag tag-hot">限时抢购</div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="grid-cell border">
+                        <div class="grid-inner">
+                            <div class="grid-img"><img src="" alt=""></div>
+                            <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                            <p>专柜价 ￥150.00</p>
+                            <span class="text-md text-hot">￥399.50</span>
+                            <s class="text-xs text-muted">￥709.394</s>
+                        </div>
+                        <div class="tag tag-primary">xxx</div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="grid-cell border">
+                        <div class="grid-inner">
+                            <div class="grid-img"><img src="" alt=""></div>
+                            <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                            <p>专柜价 ￥150.00</p>
+                            <span class="text-md text-hot">￥399.50</span>
+                            <s class="text-xs text-muted">￥709.394</s>
+                        </div>
+                        <div class="tag tag-muted">已下架</div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="grid-cell border">
+                        <div class="grid-inner">
+                            <div class="grid-img"><img src="" alt=""></div>
+                            <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                            <p>专柜价 ￥150.00</p>
+                            <span class="text-md text-hot">￥399.50</span>
+                            <s class="text-xs text-muted">￥709.394</s>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="block">
+        <h1>列表</h1>
+        <h2>纯文字列表</h2>
+        <div>
+            <ul class=" border-t">
+                <li class="list list-plain border-b">
+                    <h4>标题，列表默认自动换行，即全部内容都会展示出来</h4>
+                    <p>这这是一段比较长的内容，这是一段比较长的内容，是一段比较长的内容</p>
+                </li>
+                <li class="list list-plain border-b">
+                    <h4 class="nowrap">添加.nowrap类后内容过长会截取掉文字，不换行</h4>
+                    <p class="nowrap">这是一段比较长的内容，这是一段比较长的内容，这是一段比较长的内容</p>
+                </li>
+                <li class="list list-plain list-sm border-b">
+                    <h4>.list-sm收窄li的上下padding</h4>
+                </li>
+                <li class="list list-plain">
+                    <h4>公告：</h4>
+                </li>
+                <li class="list list-plain join-top border-b">
+                    .join-top与上一个list组合，表现为没有padding-top
+                </li>
+                <li class="list list-plain list-link list-lg bg-light">
+                    <h4 class="nowrap clearfix">伍大师 <span class="text-md text-muted fr">15988888888</span></h4>
+                    <p class="nowrap-double mt-sm">这是一个超级无敌非常很必须就是立即快，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长地址</p>
+                </li>
+            </ul>
+        </div>
+        <h2>右侧带内容的列表</h2>
+        <div>
+            <ul class="border-t">
+                <li class="list list-text list-link border-b">
+                    <h4>添加.list-link带链接图标</h4>
+                </li>
+                <li class="list list-text border-b">
+                    <div class="list-info"><h4>这是内容</h4></div>
+                    <div>更多</div>
+                </li>
+                <li class="list list-text list-link border-b">
+                    <div class="list-info"><h4>链接+文字描述</h4></div>
+                    <div>编辑</div>
+                </li>
+                <li class="list list-text list-active border-b">
+                    <h4>添加.list-active带按压效果</h4>
+                </li>
+            </ul>
+        </div>
+        <h2>带层级的列表: 添加.part-left后li带有左padding-left</h2>
+        <div>
+            <ul class="border-tb">
+                <li class="list part-left list-text border-b">
+                    <div class="list-info"><h4>组一</h4></div>
+                </li>
+                <li class="list part-left list-text">
+                    <div class="list-info"><h4>组一</h4></div>
+                </li>
+            </ul>
+            <ul class="border-b">
+                <li class="list part-left list-text border-b">
+                    <div class="list-info"><h4>组二</h4></div>
+                </li>
+                <li class="list part-left list-text">
+                    <div class="list-info"><h4>组二</h4></div>
+                </li>
+            </ul>
+        </div>
+        <h2>预览图列表</h2>
+        <div>
+            <ul class="border-tb">
+                <li class="list border-b">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4>.list-info的内容默认顶部对齐</h4>
+                    </div>
+                </li>
+                <li class="list list-one border-b">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4>.list-one的内容默认为中间对齐</h4>
+                    </div>
+                </li>
+                <li class="list part-left border-b">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4>这是标题</h4>
+                        <p>这个描述很长很长很长很长很长很长，真的好长</p>
+                    </div>
+                </li>
+                <li class="list border-b">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4 class="nowrap">添加.nowrap类后内容过长会截取掉文字，不换行</h4>
+                        <p class="nowrap">这个描述很长很长很长很长很长很长，真的好长</p>
+                    </div>
+                </li>
+                <li class="list border-b">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4 class="nowrap">添加.nowrap-double类后内容超出两行会截取掉文字</h4>
+                        <p class="nowrap-double">这个描述很长很长很长很长很长很长，真的好长，真的好长，真的好长，真的好长，真的好长，真的好长</p>
+                    </div>
+                </li>
+                <li class="list list-link border-b">
+                        <div class="list-thumb"><img src="" alt=""></div>
+                        <div class="list-info">
+                            <h4 class="nowrap">带右侧链接</h4>
+                            <p class="nowrap">这个描述很长很长很长很长很长很长，真的好长</p>
+                        </div>
+                </li>
+                <li class="list list-one list-link list-active border-b">
+                        <div class="list-thumb"><img src="" alt=""></div>
+                        <div class="list-info">
+                            <h4>带带右侧信息带右侧信息带右侧信息带右侧信息右侧信息</h4>
+                            <div>更多</div>
+                        </div>
+                </li>
+                <li class="list list-one border-b">
+                    <div class="list-thumb-sm"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4>小图</h4>
+                    </div>
+                </li>
+                <li class="list border-b list-sm">
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                        <div>数量：2</div>
+                    </div>
+                    <div class="list-action">
+                        <h4 class="">￥100.00</h4>
+                        <div class="text-muted">税率：50%</div>
+                    </div>
+                </li>
+                <li class="list border-b list-sm">
+                    <label class="checkbox"><input id="" type="checkbox" name=""></label>
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info-group">
+                        <div>
+                            <div class="list-info">
+                                <h4 class="nowrap-double">分组1.1</h4>
+                            </div>
+                            <div class="list-action">
+                                <h4 class="">分组1.2</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="list-info">
+                                <h4 class="nowrap-double">分组2.1</h4>
+                            </div>
+                            <div class="list-action">
+                                <h4 class="">分组2.2</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list border-b list-sm list-sm">
+                    <label class="checkbox"><input id="" type="checkbox" name=""></label>
+                    <div class="list-thumb"><img src="" alt=""></div>
+                    <div class="list-info-group">
+                        <div>
+                            <div class="list-info">
+                                <h4 class="nowrap-double">Agent Provocateur/大内密探 密使同名经典女士淡香水 25ml便携装</h4>
+                            </div>
+                            <div class="list-action">
+                                <h4 class="">￥100.00</h4>
+                                <p class="">税率: 50%</p>
+                            </div>
+                        </div>
+                        <div class="pt-sm">
+                            <div class="list-info join-top">
+                                <div class="ctrl-num">
+                                    <a class="num-dec" data-num="decrease" href="javascript:void(0);">-</a>                                 
+                                    <span class="num-input-wrap">
+                                        <input type="text" value="0"/>
+                                    </span>
+                                    <a class="num-inc" data-num="increase" href="javascript:void(0);">+</a>                                 
+                                </div>
+                            </div>
+                            <div class="list-action pack-center">
+                                <div class="icon icon-cancel text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list border-b">
+                    <div class="list-thumb-lg"><img src="" alt=""></div>
+                    <div class="list-info">
+                        <h4 class="nowrap-double">Gucci 古弛Gucci古弛Gucci古弛Gucci古弛Gucci 古弛Gucci 古弛Gucci 古弛Gucci 古弛Gucci 古弛</h4>
+                        <div>数量：2</div>
+                    </div>
+                    <div class="list-action">
+                        <h4 class="text-default">￥100.00</h4>
+                        <div>数量：2</div>
+                    </div>
+                </li>
+                <li class="list list-text list-sm list-sm border-b">
+                    <div class="list-info">
+                        <h4>订单号：19709394</h4>
+                    </div>
+                    <h4 class="text-primary">待收货</h4>
+                </li>
+                <li class="list list-plain list-sm list-sm">
+                    <h4 class="text-right"><span class="text-muted">商品总价:</span><span>￥999.00</span></h4>
+                </li>
+                <li class="list list-plain list-sm list-sm join-top">
+                    <h4 class="text-right"><span class="text-muted">订单关税:</span><span>￥10000.00</span></h4>
+                </li>
+                <li class="list list-plain list-sm list-sm join-top border-b">
+                    <h4 class="text-right">
+                        <span class="text-muted">已选商品<b class="ml-sm mr-sm">20</b>件，</span>
+                        <span class="text-muted">总金额:</span>
+                        <span class="text-md text-primary">￥99999.00</span>
+                    </h4>
+                </li>
+                <li class="list list-text list-sm list-sm">
+                    <div class="list-info">
+                        <h4 class="text-muted">2015-12-8 17:59:32</h4>
+                    </div>
+                    <h4>实付款：<span class="text-md text-primary">￥9999.00</span></h4>
+                </li>
+                <li class="list list-text list-sm join-top pack-end">
+                    <div>
+                        <p>请在100天23小时59分59秒9内付款</p>
+                        <div class="btn btn-xs btn-warning btn-round">立即支付</div>
+                        <div class="btn btn-xs btn-default btn-outline btn-round ml-md">取消订单</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="panel border-tb">
+                <a class="list list-lg border-b list-plain" href="./address_add.html">
+                    <h4 class="nowrap clearfix"><span class="fullname nowrap">伍大师</span><span class="text-md pl-lg">15988888888</span></h4>
+                    <p class="nowrap-double mt-sm">这是一个超级无敌非常很必须就是立即快，很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长地址</p>
+                </a>
+                <div class="list list-sm list-one">
+                    <label class="checkbox">
+                        <input id="" type="checkbox" name="" />
+                        <span class="text-muted text-md">默认地址</span>
+                    </label>
+                    <div class="list-info pack-end text-md text-muted">
+                        <a class="mr-lg pt-sm pb-sm" href="./address_add.html"><i class="icon icon-edit-1"></i> 编辑</a>
+                        <a class="pt-sm pb-sm"><i class="icon icon-trash-empty" style="font-size:15px;"></i> 删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>头像列表</h2>
+        <div>
+            <ul class="border-tb">
+                <li class="list border-b">
+                    <div class="avatar"></div>
+                    <div class="list-info pack-center">
+                        <h4>我是Lendo我怕谁？</h4>
+                    </div>
+                </li>
+                <li class="list part-left border-b">
+                    <div class="avatar"></div>
+                    <div class="list-info">
+                        <h4>Lendo</h4>
+                        <p>我是Lendo我怕谁？</p>
+                    </div>
+                </li>
+                <li class="list border-b">
+                    <div class="avatar"></div>
+                    <div class="list-info">
+                        <h4 class="nowrap">添加.nowrap类后内容过长会截取掉文字，不换行</h4>
+                        <p class="nowrap">这个描述很长很长很长很长很长很长，真的好长</p>
+                    </div>
+                </li>
+                <li class="list list-link border-b">
+                    <div class="avatar"></div>
+                    <div class="list-info">
+                        <h4 class="nowrap">带右侧链接</h4>
+                        <p class="nowrap">这个描述很长很长很长很长很长很长，真的好长</p>
+                    </div>
+                </li>
+                <li class="list list-one list-link list-active">
+                    <div class="avatar"></div>
+                    <div class="list-info">
+                        <h4>带带右侧信息带右侧信息带右侧信息带右侧信息右侧信息</h4>
+                        <div>更多</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="block">
+        <h1>头像</h1>
+        <div>
+            <div class="avatar"></div>
+            <h3>.avatar</h3>
+        </div>
+        <div>
+            <div class="avatar avatar-lg"></div>
+            <h3>.avatar .avatar-lg</h3>
+        </div>
+    </section>
+    <section class="block">
+        <h1>字体</h1>
+        <div>
+            <span> default </span>
+            <span class="text-muted"> .text-muted </span>
+            <span class="text-strong"> .text-strong </span>
+            <span class="text-primary"> .text-primary </span>
+            <span class="text-hot"> .text-hot </span>
+            <span class="text-success"> .text-success </span>
+            <span class="text-warning"> .text-warning </span>
+            <span class="text-danger"> .text-danger </span>
+        </div>
+        <div>
+            <span class="text-sm">.text-sm</span>
+            <span>default</span>
+            <span class="text-lg">.text-lg</span>
+            <span class="text-xl">.text-xl</span>
+        </div>
+        <div style="width: 300px; border:1px dashed gray;">
+            <div class="text-left">.text-left</div>
+            <div class="text-center">.text-center</div>
+            <div class="text-right">.text-right</div>
+        </div>
+    </section>
+    <section class="block">
+        <h1>国家图标</h1>
+
+        <div>
+            <i class="flag flag-ES"></i>西班牙 .flag .flag-ES
+            <i class="flag flag-NZ"></i> 新西兰 flag flag-NZ
+            <i class="flag flag-US"></i> 美国 flag flag-US
+            <i class="flag flag-FR"></i>法国.flag .flag-FR
+            <i class="flag flag-CA"></i> 加拿大.flag .flag-CA
+            <i class="flag flag-IT"></i> 意大利 .flag .flag-IT
+            <i class="flag flag-KR"></i>韩国 .flag .flag-KR
+            <i class="flag flag-SE"></i> 瑞典 .flag .flag-SE
+            <i class="flag flag-TH"></i> 泰国.flag .flag-TH
+            <i class="flag flag-GB"></i>英国.flag .flag-GB
+            <i class="flag flag-NL"></i>荷兰 .flag .flag-NL
+            <i class="flag flag-CH"></i> 瑞士 .flag .flag-CH
+            <i class="flag flag-JP"></i> 日本 .flag .flag-JP
+            <i class="flag flag-CN"></i>中国 .flag .flag-CN
+            <i class="flag flag-RU"></i> 俄罗斯.flag .flag-RU
+            <i class="flag flag-DE"></i> 德国 .flag .flag-DE
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.tag {
+    position: absolute;
+    left: -35px;
+    top: -10px;
+    width: 98px;
+    text-align: center;
+    z-index: 1;
+    padding: 28px 0 3px 0;
+    color: $color-white;
+    font-size: 12px;
+    @include rotate(-45deg);
+}
+.tag-hot {
+    background-color: $color-hot;
+}
+.tag-primary {
+    background-color: $color-primary;
+}
+.tag-muted{
+    background-color: $color-gray;
+}
+

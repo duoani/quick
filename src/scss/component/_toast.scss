@@ -1,0 +1,59 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.toast{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0 10px;
+}
+.toast-content{
+    position: relative;
+    width: 100%;
+    background: $toast-background;
+    line-height: $toast-height;
+    height: $toast-height;
+    color: $toast-color;
+    font-size: $toast-font-size;
+    text-align: center;
+    border-bottom-left-radius: $toast-radius;
+    border-bottom-right-radius: $toast-radius;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.toast-fade-out-up{
+    position: absolute;
+    padding: 0 40px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    opacity: 0;
+
+    .toast-content{
+        background: $toast-fade-out-up-background;
+        border-top-left-radius: $toast-radius;
+        border-top-right-radius: $toast-radius;
+    }
+}
+
+.toast-fade-out-up.fadeInOutUp{
+    -webkit-animation-name: fadeInOutUp;
+    animation-name: fadeInOutUp;
+}
+
+@include keyframes(fadeInOutUp) {
+    from{
+        -webkit-transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        -webkit-transform: translateY(-50px);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,70 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+// 带lv标志图标
+[class *= 'icon-lv-'] {
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: 2px;
+	width: 50px;
+	height: 21px;
+	background-image: url(#{$base-path}/icon_lv.png);
+	background-size: 50px auto;
+	background-repeat: no-repeat;
+}
+.icon-lv-2 {
+	background-position: 0 -21px;
+}
+.icon-lv-3 {
+	background-position: 0 -42px;
+}
+.icon-lv-4 {
+	background-position: 0 -63px;
+}
+.icon-lv-5 {
+	background-position: 0 -84px;
+}
+// 达人图标
+.icon-doren {
+	$doren-size: 20px;
+	display: inline-block;
+	width: $doren-size;
+	height: $doren-size;
+	background: url(#{$base-path}/icon_doren.png) no-repeat 0 0;
+	background-size: $doren-size auto;
+}
+// 没有带lv标志图标
+[class *= "crown-lv-"] {
+	display: inline-block;
+	&:after {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		background-image: url(#{$base-path}/crown.png);
+		background-repeat: no-repeat;
+		background-size: 24px auto;
+	}
+}
+.crown-lv {
+	@at-root #{&}-2 {
+		&:after {
+			background-position: 0 -25px;
+		}
+	}
+	@at-root #{&}-3 {
+		&:after {
+			background-position: 0 -50px;
+		}
+	}
+	@at-root #{&}-4 {
+		&:after {
+			background-position: 0 -75px;
+		}
+	}
+	@at-root #{&}-5 {
+		&:after {
+			background-position: 0 -100px;
+		}
+	}
+}

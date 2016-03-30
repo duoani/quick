@@ -1,0 +1,61 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.grid-2 {
+    padding-left: 15px;
+    padding-right: 5px;
+    overflow: hidden;
+
+    & > li {
+        position: relative;
+        width: 50%;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        display: inline-block;
+        overflow: hidden;
+        & > a{
+            display: block;
+        }
+    }
+}
+
+.grid-cell {
+    position: relative;
+    overflow: hidden;
+    background-color: $color-white;
+
+    h4 {
+        margin: 3px 0;
+        font-size: $font-size-sm;
+        color: $color-strong;
+        max-height: 30px;
+        overflow: hidden;
+    }
+
+    p {
+        font-size: $font-size-xs;
+        color: $color-muted;
+    }
+}
+
+.grid-inner {
+    margin: 5px;
+}
+
+.grid-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    background-size: contain;
+    
+    img{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+

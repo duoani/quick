@@ -1,0 +1,246 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: $color-light;
+    color: $color-strong;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+
+    a:active {
+        background-color: darken($color-light, 10%);
+    }
+}
+
+.nav-white{
+    background-color: $color-white;
+}
+
+.nav-primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    .nav-icon{
+        color: $color-white;
+        &:active{
+            color: $color-white;
+        }
+    }
+}
+
+.nav-t {
+    top: 0;
+    height: $nav-top-height;
+    line-height: $nav-top-height;
+    font-size: $nav-top-font-size;
+    @include border-bottom();
+
+    h4{
+        line-height: $nav-top-height;
+        padding: 0 $nav-top-icon-width;
+    }
+}
+
+.nav-b {
+    bottom: 0;
+    width: 100%;
+    height: $nav-bottom-height;
+    @include border-top();
+
+    ul {
+        position: relative;
+        height: $nav-bottom-height;
+
+        @include box;
+        @include border-top;
+
+        li {
+            @include box-flex(1);
+
+            overflow: hidden;
+
+            a:not(.btn) {
+                color: $color-strong;
+                display: block;
+                height: $nav-bottom-height;
+                text-align: center;
+                overflow: hidden;
+                .nav-icon{
+                    color: $color-strong;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $color-primary;
+                    .nav-icon{
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-action {
+    ul {
+        padding-left: $nav-edge-spacing;
+
+        li {
+            padding-right: $nav-edge-spacing;
+            @include box;
+            @include box-align(center);
+            @include box-pack(center);
+
+            //不参与平均分配
+            &.nav-item-addon {
+                @include box-flex(0);
+            }
+            //没有padding
+            &.nav-item-join {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.nav-action.nav-action-v {
+    height: auto;
+
+    ul {
+        height: auto;
+        padding-top: $nav-edge-spacing-sm;
+        padding-right: $nav-edge-spacing;
+
+        @include box-orient(vertical);
+
+        li {
+            padding-right: 0;
+            padding-bottom: $nav-edge-spacing-sm;
+        }
+    }
+}
+
+// icon
+.nav {
+    .nav-icon {
+        @include icon($display: inline-block, $margin: 0 auto);
+    }
+    .nav-text{
+        position: absolute;
+        top: 0;
+        line-height: $nav-top-height;
+        font-size: $font-size-md;
+    }
+}
+
+.nav-t {
+    .nav-icon {
+        position: absolute;
+        top: $nav-top-icon-top;
+        width: $nav-top-icon-width;
+        height: $nav-top-icon-height;
+        margin: $nav-top-icon-margin;
+        left: 0;
+        font-size: 24px;
+        line-height: 45px;
+        text-align: center;
+        &:before{
+            display:block;
+        }
+    }
+
+    .nav-icon-left,
+    .nav-text-left{
+        left: 0;
+        right: auto;
+    }
+
+    .nav-icon-right,
+    .nav-text-right{
+        left: auto;
+        right: 0;
+    }
+}
+
+.nav-b {
+    .nav-icon {
+        display: block;
+        width: $nav-bottom-icon-width;
+        height: $nav-bottom-icon-height;
+        margin: $nav-bottom-icon-margin;
+        color: $color-primary;
+        font-size: 24px;
+    }
+}
+
+.nav-icon-me {
+    &:before {
+        content: '\e80b';
+    }
+    /*&:after {*/
+        /*content: '';*/
+        /*position: absolute;*/
+        /*top: 6px;*/
+        /*left: 6px;*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*border-radius: 20px;*/
+        /*border: 1px solid white;*/
+    /*}*/
+}
+
+// icon back
+.nav-icon-back:before {
+    content: '\e805';
+}
+
+// icon home
+.nav-icon-home:before {
+    content: '\e808';
+}
+
+// icon cart
+.nav-icon-cart:before {
+    content: '\e80a';
+}
+
+.content {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto; //Andorid dose not work!
+    -webkit-overflow-scrolling: touch;
+
+    .scroll{
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+    }
+}
+
+/* content layer with top margin */
+.nav-t ~ .content, .content-t {
+    padding-top: $nav-top-height;
+    zoom: 1;
+}
+.nav-t ~ .tab-abs ~ .content{
+    padding-top: $nav-top-height + $tab-height;
+    zoom: 1;
+}
+/* content layer with bottom margin */
+.nav-b ~ .content, .content-b {
+    bottom: $nav-bottom-height;
+    zoom: 1;
+}
+.nav-action-v-2 ~ .content, .content-b2 {
+    bottom: $nav-bottom-height * 2 - $nav-edge-spacing-sm;
+    zoom: 1;
+}

@@ -1,0 +1,70 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+	<style>
+		.block {
+			padding: 20px 0;
+		}
+
+		.block h1 {
+			height: 30px;
+			line-height: 30px;
+			font-size: 20px;
+			margin-top: 15px;
+		}
+		.block h2 {
+			height: 25px;
+			line-height: 25px;
+			font-size: 14px;
+			margin-top: 15px;;
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>Loading</h4>
+</nav>
+<div class="content">
+    <section class="block">
+        <h2>块级loading</h2>
+        <div>
+            <div class="loading loading-block loading-open">
+                <p>努力加载中...</p>
+                <i></i>
+            </div>
+        </div>
+        <h2>fixed loading</h2>
+        <div>
+            <div class="btn btn-primary btn-round" id="btnOpen">打开loading</div>
+            <div class="btn btn-primary btn-round" id="btnClose">关闭loading</div>
+            <!--<div class="loading loading-modal">-->
+                <!--<div class="loading-modal-dialog">-->
+                    <!--<i></i>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="loading loading-modeless loading-open">-->
+                <!--<i></i>-->
+            <!--</div>-->
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+<script>
+    $('#btnOpen').on('click', function(){
+        $.loadingShow();
+    });
+    $('#btnClose').on('click', function(){
+        $.loadingHide();
+    });
+</script>
+<script>
+</script>
+</body>
+</html>

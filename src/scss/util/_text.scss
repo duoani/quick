@@ -1,0 +1,164 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+// 文字颜色 {
+    .text-gray {
+        color: $color-gray !important;
+    }
+
+    .text-muted {
+        color: $color-muted !important;
+    }
+
+    .text-muted-gray {
+        color: $color-muted-gray !important;
+    }
+
+    .text-strong {
+        color: $color-strong !important;
+    }
+
+    .text-default {
+        color: $color-default !important;
+    }
+
+    .text-primary {
+        color: $color-primary !important;
+    }
+
+    .text-hot {
+        color: $color-hot !important;
+    }
+
+    .text-success {
+        color: $color-success !important;
+    }
+
+    .text-warning {
+        color: $color-warning !important;
+    }
+
+    .text-danger {
+        color: $color-danger !important;
+    }
+// }
+
+// 行内水平对齐 {
+    .text-center {
+        text-align: center !important;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+// }
+
+// Box水平/竖直对齐 {
+    .pack-start {
+        @include box();
+        @include box-pack(start, !important); 
+    }
+
+    .pack-end {
+        @include box();
+        @include box-pack(end, !important);
+    }
+
+    .pack-center {
+        @include box();
+        @include box-pack(center, !important);
+    }
+
+    .pack-justify {
+        @include box();
+        @include box-pack(justify, !important);
+    }
+
+    .align-start {
+        @include box();
+        @include box-align(start, !important);
+    }
+
+    .align-end {
+        @include box();
+        @include box-align(end, !important);
+    }
+
+    .align-center{
+        @include box();
+        @include box-align(center, !important);
+    }
+// }
+
+// font size {
+    .text-sm {
+        font-size: $font-size-sm !important;
+    }
+
+    .text-xs{
+        font-size: $font-size-xs !important;
+    }
+
+    .text-md {
+        font-size: $font-size-md !important;
+    }
+
+    .text-normal {
+        fot-size: $font-size !important;
+    }
+
+    .text-lg {
+        font-size: $font-size-lg !important;
+    }
+    .text-bold{
+        font-weight: bolder !important;
+    }
+// } font size
+
+// 文字截断 {
+    // 单行文字截断
+    .nowrap{
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    // flex布局单行文字截断
+    .nowrap-flex {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        -webkit-box-flex: 1;
+        height: inherit;
+    }
+
+    //超出两行文字则截断
+    .nowrap-double {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    //超出两行文字则截断
+    .nowrap-triple {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+// }
+
+// 中横线
+.line-through {
+    text-decoration: line-through;
+}

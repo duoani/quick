@@ -1,0 +1,202 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.form-line{
+    position: relative;
+    background-color: $color-white;
+
+    @include box();
+
+    select,
+    input[type=text],
+    input[type=password] {
+        height: $form-line-height;
+    }
+
+    &.has-error {
+        .form-error {
+            display: block;
+        }
+    }
+
+    .checkbox {
+        line-height: $form-line-height;
+        input{
+            vertical-align: -7px;
+        }
+    }
+}
+
+.form-label {
+    display: block;
+    line-height: $form-line-height;
+    width: $form-label-width;
+    padding: $form-label-padding;
+    font-size: $font-size-md;
+    color: $form-label-color;
+}
+
+.form-control {
+    position: relative;
+    outline: none;
+    margin: 0;
+    padding-left: $form-control-padding;
+    padding-right: $form-control-padding;
+    font-size: $font-size-md;
+
+    @include box-flex(1);
+
+    &.form-control-pad{
+        margin-left: $form-control-padding;
+        padding-left: 0;
+    }
+
+    input[type=text],
+    input[type=password],
+    textarea,
+    select,
+    .form-static {
+        display: block;
+        width: 100%;
+        border: none;
+        border-style: none;
+        outline: none;
+        font-size: $font-size-md;
+        padding: $form-input-padding;
+        line-height: $form-input-line-height;
+        background-color: transparent;
+
+    }
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder{
+        color: $color-muted;
+        font-weight: normal;
+        font-size: $font-size-md;
+    } 
+
+    select {
+        position: relative;
+        -webkit-appearance: none;
+    }
+
+    .form-static-sm {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: $font-size;
+        padding: $form-input-padding;
+        line-height: $form-input-line-height / 2;
+    }
+
+    .input-group {
+        position: relative;
+        border-collapse: separate;
+        @include box;
+        @include box-orient(horizontal);
+
+        .input-group-addon{
+            position: relative;
+            white-space: nowrap;
+            @include box;
+            @include box-pack(center);
+            @include box-align(center);
+        }
+
+        .form-static,
+        .form-static-sm,
+        .checkbox,
+        input[type=text],
+        input[type=password] {
+            @include box;
+            @include box-flex(1);
+        }
+    }
+}
+
+.form-label-long {
+    .form-label {
+        width: $form-label-width-lg;
+    }
+}
+
+.form-btn-line {
+    padding: $form-btn-line-padding;
+    font-size: $font-size-md;
+}
+
+.form-control.form-action-control{
+    padding-right: 0;
+}
+.form-clear{
+    position: relative;
+    display: none;
+    text-align: center;
+
+    @include icon;
+    &:before{
+        content: '\e81c';
+    }
+}
+.form-control.has-value{
+    .form-clear{
+        display: block;
+    }
+}
+
+// Form error
+.form-error {
+    display: none;
+    position: absolute;
+    bottom: 1px;
+    font-size: $font-size-sm;
+    color: $color-danger;
+    padding-bottom: 0;
+}
+.form-error-inline{
+    position: relative;
+}
+
+.form-icon-clear {
+    @include icon;
+    &:before{
+        content: "";
+    }
+
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: lighten($color-muted, 10%);
+    border-radius: 10px;
+    margin: 0 auto;
+    color: $color-white;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+}
+.form-sm{
+    select,
+    input[type=text],
+    input[type=password] {
+        height: $form-line-height-sm;
+    }
+    input[type=text],
+    input[type=password],
+    textarea,
+    .form-static,
+    .form-static-sm {
+        padding: $form-input-padding-sm;
+
+    }
+
+    .checkbox {
+        line-height: $form-line-height-sm;
+        input{
+            vertical-align: -7px;
+        }
+    }
+    .form-label {
+        line-height: $form-line-height-sm;
+    }
+}

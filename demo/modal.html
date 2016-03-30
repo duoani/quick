@@ -1,0 +1,110 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Quick UI Demo</title>
+	<link rel="stylesheet" href="../dist/css/quick.min.css"/>
+	<style>
+		.block {
+			padding: 20px 0;
+		}
+
+		.block h1 {
+			height: 30px;
+			line-height: 30px;
+			font-size: 20px;
+			margin-top: 15px;
+		}
+		.block h2 {
+			height: 25px;
+			line-height: 25px;
+			font-size: 14px;
+			margin-top: 15px;;
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+<nav class="nav nav-t">
+    <a href="index.html" class="nav-icon nav-icon-back"></a>
+    <h4>弹窗</h4>
+</nav>
+<div class="content">
+    <!--
+    <div class="modal modal-open">
+        <div class="modal-dialog">
+            <div class="modal-header">hello header</div>
+            <div class="modal-body">
+                <h4>这是标题</h4>
+                <p>这是内容这是内容这是内容这是内容这是内容这是内容</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-role="button">取消</button>
+                <button type="button" data-role="button">确定</button>
+            </div>
+        </div>
+    </div>
+    -->
+    <section class="block">
+        <h2>样式</h2>
+        <div>
+            <div id="btn1-1" class="btn btn-sm btn-link">弹窗1</div>
+            <div id="btn1-2" class="btn btn-sm btn-primary btn-outline">弹窗2</div>
+            <div id="btn1-3" class="btn btn-sm btn-default">弹窗3</div>
+            <div id="btn1-4" class="btn">自定义样式</div>
+        </div>
+        <h2>事件</h2>
+        <div>
+            <div id="btn2-1" class="btn btn-sm btn-primary">事件</div>
+        </div>
+        <pre><code>
+$.modal({
+        title: "主标题"
+        subtitle: "副标题", 
+        content: "正文",
+        buttons: ["确定", "取消"]
+    })
+    .on("modal:action", function(e){
+        console.log("clicks: ", e.index)
+    })
+    .on("modal:close", function(){
+        console.log("close")
+    });
+        </code></pre>
+    </section>
+</div>
+<script type="text/javascript" src="../dist/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../dist/js/quick.min.js"></script>
+<script>
+//样式
+$("#btn1-1").on("click", function(){
+    $.modal({title: "title", content: "content", buttons: ["确定", "取消"]})
+});
+$("#btn1-2").on("click", function(){
+    $.modal({subtitle: "subtitle", content: "content", buttons: ["OK"]})
+});
+$("#btn1-3").on("click", function(){
+    $.modal({subtitle: "subtitle", buttons: ["是", "否"]})
+});
+$("#btn1-4").on("click", function(){
+    $.modal({
+        type:"html",
+        title:"输入优惠码",
+        content:'<div class="form-line"><div class="form-control"><input type="text" value="" placeholder="文本"><div class="form-error">这是错误信息</div></div></div>'
+    });
+});
+//事件
+$("#btn2-1").on("tap", function(){
+    $.modal({subtitle: "subtitle", buttons: ["确定", "取消"]})
+        .on("modal:action", function(e){
+            var subtitle = "clicks: " + e.index;
+            $.modal({"subtitle": subtitle})
+        })
+        .on("modal:close", function(){
+            console.log("close")
+        });
+});
+</script>
+</body>
+</html>

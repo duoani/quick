@@ -1,0 +1,178 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+.list {
+    position: relative;
+    padding-left: $list-pad;
+    padding-right: $list-pad;
+    background-color: $color-white;
+
+    padding-top: $list-tb-spacing;
+    padding-bottom: $list-tb-spacing;
+
+    @include box;
+
+    h4 {
+        font-size: $font-size-md;
+        &>span{
+            vertical-align: bottom;
+        }
+    }
+    p {
+        color: $color-muted;
+        font-size: $font-size;
+    }
+
+    .checkbox {
+        @include box;
+        @include box-align(center);
+        @include box-pack(start);
+    }
+}
+
+.list-plain {
+    display: block;
+}
+
+/*
+加上此类有按压效果
+ */
+.list-active {
+    &:active,
+    &.active {
+        background-color: $color-light;
+    }
+}
+
+.list-info {
+    @include box();
+    @include box-flex(1);
+    @include box-orient(vertical);
+    @include box-pack(start);
+}
+
+.list-action {
+    @include box();
+    @include box-orient(vertical);
+    @include box-pack(start);
+    @include box-align(end);
+    padding-left: $list-pad-sm;
+}
+
+.list-text {
+    padding-top: $list-tb-spacing;
+    padding-bottom: $list-tb-spacing;
+    padding-right: $list-pad;
+}
+
+.list-link {
+    padding-right: $list-pad-md;
+}
+
+.list-plain {
+    padding-top: $list-tb-spacing;
+    padding-bottom: $list-tb-spacing;
+    padding-left: $list-pad;
+    padding-right: $list-pad;
+}
+
+.list-plain.list-link{
+    padding-right: $list-pad-md;
+}
+
+.list-link{
+    @include icon;
+}
+// icon forward
+.list-link:before {
+    content: '\e803';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: -10px;
+    pointer-events: none;
+    font-size: $font-size-lg;
+    color: $color-muted;
+}
+
+.list-link-down:before {
+    content: '\e804';
+}
+
+// 收窄上下padding
+.list-sm {
+    padding-top: $list-pad-sm;
+    padding-bottom: $list-pad-sm;
+}
+
+// 图片或头像支持
+.list>.avatar,
+.list>.avatar-wrap,
+.list-thumb,
+.list-thumb-lg,
+.list-thumb-sm {
+    position: relative;
+    margin-right: $list-pad-sm;
+}
+
+.list-thumb,
+.list-thumb-lg,
+.list-thumb-sm {
+    @include box;
+    @include box-align(center);
+    @include box-pack(center);
+
+    & > img {
+        display: block; //避免inline-block的隐性撑高
+        background-size: contain;
+    }
+}
+
+.list-thumb {
+    min-height: $list-thumb-size;
+    & img{
+        width: $list-thumb-size;
+        height: auto;
+    }
+}
+
+.list-thumb-lg {
+    min-height: $list-thumb-lg-size;
+    & img {
+        width: $list-thumb-lg-size;
+        height: auto;
+    }
+}
+
+.list-thumb-sm {
+    min-height: $list-thumb-sm-size;
+    & img {
+        width: $list-thumb-sm-size;
+        height: auto;
+    }
+}
+
+// 单行居中列表
+.list-one {
+    line-height: 44px;
+
+    .list-info {
+        @include box-orient(horizontal);
+        @include box-align(center);
+    }
+    h4 {
+        -webkit-box-flex: 1;
+    }
+}
+
+.list-info-group {
+    @include box;
+    @include box-orient(vertical);
+    @include box-flex(1);
+
+    & > * {
+        @include box;
+    }
+}
