@@ -12,16 +12,16 @@ $color-transparent : transparent !default;
 $color-white       : #ffffff!default;
 $color-light       : #f7f7f7 !default;
 $color-gray        : #8d8d8d !default;
-$color-muted       : #a48b78 !default;
+$color-muted       : #8d8d8d !default;
 $color-muted-gray  : #c7c7c7 !default;
 
-$color-default     : #604c3f !default;
-$color-strong      : #604c3f !default;
-$color-primary     : #80cac6 !default;
+$color-default     : #333333 !default;
+$color-strong      : #000000 !default;
+$color-primary     : #009dd9 !default;
 $color-success     : #8ec31f !default;
-$color-hot         : #e94662 !default;
-$color-danger      : #d9534f !default;
-$color-warning     : #f9b72d !default;
+$color-hot         : #ff3333 !default;
+$color-danger      : #ff3333 !default;
+$color-warning     : #fe7700 !default;
 $color-box-border  : #ececec !default;
 
 // Border
@@ -103,6 +103,10 @@ $btn-warning-border : darken($color-warning, 5%) !default;
 $btn-danger-color   : $color-white !default;
 $btn-danger-bg      : $color-danger !default;
 $btn-danger-border  : darken($color-danger, 5%) !default;
+
+$btn-white-color   : $color-gray !default;
+$btn-white-bg      : $color-white !default;
+$btn-white-border  : darken($color-gray, 5%) !default;
 
 // Navigator
 $nav-top-height: 45px;

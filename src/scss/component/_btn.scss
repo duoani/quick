@@ -74,6 +74,9 @@
 .btn-danger {
     @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
+.btn-white {
+    @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+}
 
 .btn-outline {
     &.btn-default {
@@ -98,6 +101,10 @@
 
     &.btn-danger {
         @include button-outline-variant($btn-danger-bg);
+    }
+
+    &.btn-white {
+        @include button-outline-variant($btn-white-bg);
     }
 }
 
