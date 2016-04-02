@@ -1,4 +1,7 @@
-
+/**
+ * require zepto.js
+ * require ui.js
+ */
 //设置商品数量
 +(function ($) {
     "use strict";

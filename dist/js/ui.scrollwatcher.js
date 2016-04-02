@@ -1,1 +1,1 @@
-!function(){$.fn.scrollwatcher=function(n){return this.each(function(){var o=$(this),c=o.scrollTop(),r=n||function(){};o.on("scroll",function(){var n=o.scrollTop(),t=n-c;return 0===t?!1:(r(t>0?"down":"up",n),void(c=n))})})}}();
+!function(n){n.fn.scrollwatcher=function(o){return this.each(function(){var c=n(this),r=c.scrollTop(),t=o||function(){};c.on("scroll",function(){var n=c.scrollTop(),o=n-r;return 0===o?!1:(t(o>0?"down":"up",n),void(r=n))})})}}(window.Zepto);

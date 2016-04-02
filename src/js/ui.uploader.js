@@ -1,5 +1,8 @@
 
 /**
+ * 图片上传控件 image uploader
+ * require zepto.js
+ *
  var uploader = new lupload.Uploader({
      trigger: ".upload",
      url: "index.php?route=tool/upload/image",

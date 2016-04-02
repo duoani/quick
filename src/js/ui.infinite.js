@@ -1,5 +1,6 @@
 /**
  * 无限滚动
+ * require zepto.js
  */
 !function($){
     var defaults = {
@@ -78,7 +79,6 @@
             clearTimeout(this.scrollTick);
             this.$scrollTarget.off("scroll", this.scrollHandler);
         }
-
     };
 
     function Plugin() {

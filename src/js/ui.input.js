@@ -1,3 +1,6 @@
+/**
+ * require zepto.js
+ */
 !function($){
 
     var ATTR_INPUT = '[data-input-type="text"]';

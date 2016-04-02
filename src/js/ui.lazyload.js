@@ -1,3 +1,6 @@
+/**
+ * require zepto.js
+ */
 !function ($) {
 
     // lazy type

@@ -1,7 +1,9 @@
 /*
  * 图片预览
- * require $.modal
- * require fz.slider
+ * require zepto.js
+ * require ui.js
+ * require ui.modal.js
+ * require ui.slider.js
  */ 
 !function($){
     'use strict';

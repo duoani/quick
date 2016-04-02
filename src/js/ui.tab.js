@@ -1,3 +1,7 @@
+/**
+ * $.fn.tab
+ * require zepto.js
+ */
 !function($){
     'use strict';
     function Tab(element){

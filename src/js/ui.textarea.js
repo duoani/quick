@@ -1,3 +1,7 @@
+/**
+ * $.fn.textarea
+ * require zepto.js
+ */
 !function ($) {
     "use strict";
     var defaults = {

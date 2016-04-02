@@ -1,4 +1,8 @@
-!function(){
+/**
+ * $.fn.scrollwatcher
+ * require zepto.js
+ */
+!function($){
     $.fn.scrollwatcher = function(callback){
         return this.each(function(){
             var $elem = $(this),
@@ -16,4 +20,4 @@
             });
         });
     };
-}();
+}(window.Zepto);
